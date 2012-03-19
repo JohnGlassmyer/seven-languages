@@ -30,5 +30,6 @@ module Main where
 	multTable1to12 = multTable [1..12]
 	
 	-- Solve the map-coloring problem (Map Coloring, on page 83) using Haskell.
-	-- ...
+	mapColors = ["red", "green", "blue"]
+	mapColorMappings = [(("ms", ms), ("tn", tn), ("al", al), ("ga", ga), ("fl", fl)) | ms <- mapColors, tn <- mapColors, al <- mapColors, ga <- mapColors, fl <- mapColors, ms /= tn, ms /= al, tn /= al, tn /= ga, al /= ga, al /= fl, ga /= fl]
 	
